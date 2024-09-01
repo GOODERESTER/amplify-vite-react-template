@@ -37,7 +37,6 @@ function App() {
             <li 
             onClick={() => deleteTodo(todo.id)}
             key={todo.id}>{todo.content}</li>
-            
           ))}
         </ul>
         <div>
