@@ -1,0 +1,41 @@
+.item-container{
+    padding: 20px;
+}
+
+.clothes-img-container > img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: transparent;
+}
+
+.carousel-container{
+    background-color: black;
+    text-align: left;
+}
+
+.carousel{
+    width: 100%;
+}
+
+.review-button-row{
+    height: auto;
+}
+
+.comment-row{
+    height: 1px;
+    overflow: scroll;
+}
+
+.clothes-review-button-container{
+    height: 100%;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+.tags-container{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+}

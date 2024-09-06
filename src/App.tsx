@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import React from 'react';
+//import React from 'react';
 import { uploadData } from 'aws-amplify/storage';
 import type { Schema } from "../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
@@ -26,9 +26,19 @@ function App() {
   const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]); 
   const [file, setFile] = useState<File | null>(null);
 
-    const handleChange = (event: any) => {
-        setFile(event.target.files[0]);
-    };
+  const handleChange = (event: any) => {
+      setFile(event.target.files[0]);
+  };
+
+  const fetchTodos = async () => {
+    const { data: items, errors } = await client.models.Todo.list();
+    console.log(errors);
+    setTodos(items);
+  };
+
+  useEffect(() => {
+    fetchTodos();
+  }, []);
 
     
   function deleteTodo(id: string) {
