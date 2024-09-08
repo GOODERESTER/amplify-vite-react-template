@@ -76,7 +76,7 @@ function App() {
       )}
       </Authenticator>
       <div>
-            <input type="file" onChange={handleChange} />
+          <input type="file" onChange={handleChange} />
             <button
                 onClick={() => {
                   try {
@@ -84,7 +84,7 @@ function App() {
                       throw new Error("No file selected");
                     }
                     uploadData({
-                      path: `clothing-photos/${file.name}`,
+                      path: `picture-submissions/${file.name}`,
                       data: file,
                     });
                   } catch (error) {
